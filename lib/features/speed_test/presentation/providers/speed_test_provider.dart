@@ -100,7 +100,8 @@ class SpeedTestProvider extends ChangeNotifier {
     result.fold((failure) => _errorMessage = failure.message, (_) {
       final index = _speedTests.indexWhere((test) => test.id == id);
       if (index != -1) {
-        _speedTests[index] = _speedTests[index].copyWith(label: label);
+        final updatedTest = _speedTests[index].copyWith(label: label);
+        _speedTests = List.from(_speedTests)..[index] = updatedTest;
         _errorMessage = null;
       }
     });
@@ -112,9 +113,10 @@ class SpeedTestProvider extends ChangeNotifier {
     result.fold((failure) => _errorMessage = failure.message, (_) {
       final index = _speedTests.indexWhere((test) => test.id == id);
       if (index != -1) {
-        _speedTests[index] = _speedTests[index].copyWith(
+        final updatedTest = _speedTests[index].copyWith(
           isFavorite: !_speedTests[index].isFavorite,
         );
+        _speedTests = List.from(_speedTests)..[index] = updatedTest;
         _errorMessage = null;
       }
     });
