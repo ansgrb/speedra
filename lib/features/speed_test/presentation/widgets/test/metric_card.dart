@@ -7,12 +7,12 @@ class MetricCard extends StatelessWidget {
   final bool isLoading;
 
   const MetricCard({
-    Key? key,
+    super.key,
     required this.label,
     required this.value,
     required this.unit,
     this.isLoading = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

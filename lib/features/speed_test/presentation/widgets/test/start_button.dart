@@ -65,8 +65,8 @@ class _StartButtonState extends State<StartButton>
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: colorScheme.primary.withOpacity(
-                      0.4 * _pulseController.value,
+                    color: colorScheme.primary.withAlpha(
+                      (255 * 0.4 * _pulseController.value).round(),
                     ),
                     blurRadius: 40,
                     spreadRadius: 10 * _pulseController.value,

@@ -13,14 +13,13 @@ class EmptyHistoryView extends StatelessWidget {
         children: [
           Icon(
             Icons.history,
-            size: 64,
-            color: colorScheme.onSurfaceVariant.withOpacity(0.3),
+            color: colorScheme.onSurfaceVariant.withAlpha((255 * 0.3).round()),
           ),
           const SizedBox(height: 16),
           Text(
             'No tests yet',
             style: TextStyle(
-              color: colorScheme.onSurfaceVariant.withOpacity(0.5),
+              color: colorScheme.onSurfaceVariant.withAlpha((255 * 0.5).round()),
               fontSize: 18,
             ),
           ),
@@ -28,7 +27,7 @@ class EmptyHistoryView extends StatelessWidget {
           Text(
             'Run a speed test to see results here',
             style: TextStyle(
-              color: colorScheme.onSurfaceVariant.withOpacity(0.3),
+              color: colorScheme.onSurfaceVariant.withAlpha((255 * 0.3).round()),
               fontSize: 14,
             ),
           ),
