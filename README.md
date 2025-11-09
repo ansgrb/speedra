@@ -56,14 +56,15 @@ speedRa leverages a set of high-quality, community-trusted packages to provide a
 | `equatable`          | To compare objects for equality, used in the BLoC states and events.        |
 | `intl`               | For date formatting and internationalization.                               |
 
-## Screenshots
+## 📸 Screenshots
 
-| Light Mode | Dark Mode |
-| :--------: | :-------: |
-|            |           |
-|            |           |
+| Light Mode                                        | Dark Mode                                       |
+| :------------------------------------------------ | :---------------------------------------------- |
+| <img src="docs/screenshot_test_light.png" width="300"> | <img src="docs/screenshot_test_dark.png" width="300"> |
+| <img src="docs/screenshot_test_result_light.png" width="300"> | <img src="docs/screenshot_test_result_dark.png" width="300"> |
+| <img src="docs/screenshot_history_light.png" width="300"> | <img src="docs/screenshot_history_dark.png" width="300"> |
 
-## Getting Started
+## 🚀 Getting Started
 
 To get a local copy up and running, follow these simple steps.
 
