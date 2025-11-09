@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:speedra/features/about/presentation/screens/about_screen.dart';
 import 'package:speedra/features/connectivity/presentation/widgets/connectivity_banner.dart';
 import 'package:speedra/features/settings/presentation/providers/theme_provider.dart';
 
@@ -33,6 +34,16 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             onPressed: () => context.read<ThemeProvider>().toggleTheme(),
             tooltip: 'Toggle theme',
+          ),
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AboutScreen()),
+              );
+            },
+            tooltip: 'About',
           ),
         ],
       ),
