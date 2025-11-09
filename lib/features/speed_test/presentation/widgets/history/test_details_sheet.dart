@@ -11,47 +11,53 @@ class TestDetailsSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(24),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Stack(
         children: [
-          Text(
-            'Test Details',
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
-          const SizedBox(height: 16),
-          ListTile(
-            leading: const Icon(Icons.calendar_today),
-            title: const Text('Date'),
-            subtitle: Text(DateFormatter.formatFull(test.timestamp)),
-          ),
-          ListTile(
-            leading: const Icon(Icons.download),
-            title: const Text('Download Speed'),
-            subtitle: Text('${test.downloadSpeed.toStringAsFixed(2)} Mbps'),
-          ),
-          ListTile(
-            leading: const Icon(Icons.upload),
-            title: const Text('Upload Speed'),
-            subtitle: Text('${test.uploadSpeed.toStringAsFixed(2)} Mbps'),
-          ),
-          ListTile(
-            leading: const Icon(Icons.speed),
-            title: const Text('Ping'),
-            subtitle: Text('${test.ping} ms'),
-          ),
-          if (test.label != null)
-            ListTile(
-              leading: const Icon(Icons.label),
-              title: const Text('Label'),
-              subtitle: Text(test.label!),
+          SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Test Details',
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
+                const SizedBox(height: 16),
+                ListTile(
+                  leading: const Icon(Icons.calendar_today),
+                  title: const Text('Date'),
+                  subtitle: Text(DateFormatter.formatFull(test.timestamp)),
+                ),
+                ListTile(
+                  leading: const Icon(Icons.download),
+                  title: const Text('Download Speed'),
+                  subtitle: Text('${test.downloadSpeed.toStringAsFixed(2)} Mbps'),
+                ),
+                ListTile(
+                  leading: const Icon(Icons.upload),
+                  title: const Text('Upload Speed'),
+                  subtitle: Text('${test.uploadSpeed.toStringAsFixed(2)} Mbps'),
+                ),
+                ListTile(
+                  leading: const Icon(Icons.speed),
+                  title: const Text('Ping'),
+                  subtitle: Text('${test.ping} ms'),
+                ),
+                if (test.label != null)
+                  ListTile(
+                    leading: const Icon(Icons.label),
+                    title: const Text('Label'),
+                    subtitle: Text(test.label!),
+                  ),
+              ],
             ),
-          const SizedBox(height: 16),
-          SizedBox(
-            width: double.infinity,
-            child: FilledButton(
+          ),
+          Positioned(
+            top: 0,
+            right: 0,
+            child: IconButton(
+              icon: const Icon(Icons.close),
               onPressed: () => Navigator.pop(context),
-              child: const Text('Close'),
             ),
           ),
         ],
