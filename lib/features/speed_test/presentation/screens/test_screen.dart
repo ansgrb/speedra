@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'package:speedra/features/connectivity/presentation/bloc/connectivity_bloc.dart';
+import 'package:speedra/features/connectivity/presentation/bloc/connectivity_state.dart';
 import 'package:speedra/features/speed_test/presentation/providers/speed_test_provider.dart';
 import 'package:speedra/features/speed_test/presentation/widgets/test/metric_card.dart';
 import 'package:speedra/features/speed_test/presentation/widgets/test/start_button.dart';
@@ -24,7 +27,18 @@ class TestScreen extends StatelessWidget {
             const SizedBox(height: 20),
 
             if (!provider.isTesting && provider.currentDownload == null)
-              StartButton(onPressed: () => provider.performSpeedTest())
+              StartButton(onPressed: () {
+                final connectivityState = context.read<ConnectivityBloc>().state;
+                if (connectivityState is ConnectivityFailure) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Please check your internet connection'),
+                    ),
+                  );
+                } else {
+                  provider.performSpeedTest();
+                }
+              })
             else
               _buildTestResults(context, provider),
           ],
@@ -94,7 +108,18 @@ class TestScreen extends StatelessWidget {
 
         if (!provider.isTesting && provider.currentDownload != null)
           FilledButton.icon(
-            onPressed: () => provider.performSpeedTest(),
+            onPressed: () {
+              final connectivityState = context.read<ConnectivityBloc>().state;
+              if (connectivityState is ConnectivityFailure) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Please check your internet connection'),
+                  ),
+                );
+              } else {
+                provider.performSpeedTest();
+              }
+            },
             icon: const Icon(Icons.refresh),
             label: const Text('TEST AGAIN'),
           ),

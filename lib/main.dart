@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'package:speedra/features/connectivity/presentation/bloc/connectivity_bloc.dart';
 import 'package:speedra/features/settings/presentation/providers/theme_provider.dart';
 import 'package:speedra/features/speed_test/presentation/providers/speed_test_provider.dart';
 import 'package:speedra/features/speed_test/presentation/screens/home_screen.dart';
@@ -27,6 +29,9 @@ class SpeedTestApp extends StatelessWidget {
 
         // Speed Test Provider (Main app functionality)
         ChangeNotifierProvider(create: (_) => di.sl<SpeedTestProvider>()),
+
+        // Connectivity Provider (Network Status)
+        BlocProvider(create: (_) => di.sl<ConnectivityBloc>()),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, _) {
