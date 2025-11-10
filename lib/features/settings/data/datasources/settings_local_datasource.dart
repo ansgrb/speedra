@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:speedra/core/constants/storage_keys.dart';
-import 'package:speedra/core/errors/exceptions.dart';
+import 'package:speedra/core/error/exceptions.dart';
 
 abstract class SettingsLocalDataSource {
   Future<ThemeMode> getThemeMode();

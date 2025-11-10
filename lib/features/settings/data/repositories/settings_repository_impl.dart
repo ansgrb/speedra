@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:speedra/core/errors/exceptions.dart';
-import 'package:speedra/core/errors/failures.dart';
+import 'package:speedra/core/error/exceptions.dart';
+import 'package:speedra/core/error/failures.dart';
 import 'package:speedra/features/settings/data/datasources/settings_local_datasource.dart';
 import 'package:speedra/features/settings/domain/repositories/settings_repository.dart';
 

@@ -5,7 +5,7 @@ import 'package:speedra/features/connectivity/presentation/bloc/connectivity_blo
 import 'package:speedra/features/settings/presentation/providers/theme_provider.dart';
 import 'package:speedra/features/speed_test/presentation/providers/speed_test_provider.dart';
 import 'package:speedra/features/speed_test/presentation/screens/home_screen.dart';
-import 'package:speedra/injection_container.dart' as di;
+import 'package:speedra/core/di/injection_container.dart' as di;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

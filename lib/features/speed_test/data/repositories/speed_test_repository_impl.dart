@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:speedra/core/errors/exceptions.dart';
-import 'package:speedra/core/errors/failures.dart';
+import 'package:speedra/core/error/exceptions.dart';
+import 'package:speedra/core/error/failures.dart';
 import 'package:speedra/features/speed_test/data/datasources/speed_test_local_datasource.dart';
 import 'package:speedra/features/speed_test/data/datasources/speed_test_remote_datasource.dart';
 import 'package:speedra/features/speed_test/data/models/speed_test_model.dart';
