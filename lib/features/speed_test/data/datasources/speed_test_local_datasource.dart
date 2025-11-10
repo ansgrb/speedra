@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:speedra/core/constants/storage_keys.dart';
-import 'package:speedra/core/errors/exceptions.dart';
+import 'package:speedra/core/error/exceptions.dart';
 import 'package:speedra/features/speed_test/data/models/speed_test_model.dart';
 
 abstract class SpeedTestLocalDataSource {

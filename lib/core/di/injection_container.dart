@@ -4,32 +4,31 @@ import 'package:http/http.dart' as http;
 import 'package:connectivity_plus/connectivity_plus.dart';
 
 // Features - Speed Test
-import 'features/speed_test/data/datasources/speed_test_local_datasource.dart';
-import 'features/speed_test/data/datasources/speed_test_remote_datasource.dart';
-import 'features/speed_test/data/repositories/speed_test_repository_impl.dart';
-import 'features/speed_test/domain/repositories/speed_test_repository.dart';
-import 'features/speed_test/domain/usecases/run_speed_test.dart';
-import 'features/speed_test/domain/usecases/get_speed_tests.dart';
-import 'features/speed_test/domain/usecases/update_test_label.dart';
-import 'features/speed_test/domain/usecases/toggle_favorite.dart';
-import 'features/speed_test/domain/usecases/delete_test.dart';
-import 'features/speed_test/presentation/providers/speed_test_provider.dart';
+import '../../features/speed_test/data/datasources/speed_test_local_datasource.dart';
+import '../../features/speed_test/data/datasources/speed_test_remote_datasource.dart';
+import '../../features/speed_test/data/repositories/speed_test_repository_impl.dart';
+import '../../features/speed_test/domain/repositories/speed_test_repository.dart';
+import '../../features/speed_test/domain/usecases/run_speed_test.dart';
+import '../../features/speed_test/domain/usecases/get_speed_tests.dart';
+import '../../features/speed_test/domain/usecases/update_test_label.dart';
+import '../../features/speed_test/domain/usecases/toggle_favorite.dart';
+import '../../features/speed_test/domain/usecases/delete_test.dart';
+import '../../features/speed_test/presentation/providers/speed_test_provider.dart';
 
 // Features - Settings
-import 'features/settings/data/datasources/settings_local_datasource.dart';
-import 'features/settings/data/repositories/settings_repository_impl.dart';
-import 'features/settings/domain/repositories/settings_repository.dart';
-import 'features/settings/domain/usecases/get_theme_mode.dart';
-import 'features/settings/domain/usecases/toggle_theme_mode.dart';
-import 'features/settings/presentation/providers/theme_provider.dart';
+import '../../features/settings/data/datasources/settings_local_datasource.dart';
+import '../../features/settings/data/repositories/settings_repository_impl.dart';
+import '../../features/settings/domain/repositories/settings_repository.dart';
+import '../../features/settings/domain/usecases/get_theme_mode.dart';
+import '../../features/settings/domain/usecases/toggle_theme_mode.dart';
+import '../../features/settings/presentation/providers/theme_provider.dart';
 
 // Features - Connectivity
-import 'features/connectivity/data/datasources/connectivity_datasource.dart';
-import 'features/connectivity/data/repositories/connectivity_repository_impl.dart';
-import 'features/connectivity/domain/repositories/connectivity_repository.dart';
-import 'features/connectivity/domain/usecases/get_connectivity_status.dart';
-import 'features/connectivity/presentation/bloc/connectivity_bloc.dart';
-
+import '../../features/connectivity/data/datasources/connectivity_datasource.dart';
+import '../../features/connectivity/data/repositories/connectivity_repository_impl.dart';
+import '../../features/connectivity/domain/repositories/connectivity_repository.dart';
+import '../../features/connectivity/domain/usecases/get_connectivity_status.dart';
+import '../../features/connectivity/presentation/bloc/connectivity_bloc.dart';
 
 final sl = GetIt.instance;
 

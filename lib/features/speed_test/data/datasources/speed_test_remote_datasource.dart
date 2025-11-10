@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:http/http.dart' as http;
 import 'package:speedra/core/constants/app_constants.dart';
-import 'package:speedra/core/errors/exceptions.dart';
+import 'package:speedra/core/error/exceptions.dart';
 
 abstract class SpeedTestRemoteDataSource {
   Future<int> measurePing();
